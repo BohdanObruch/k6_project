@@ -58,7 +58,7 @@ You can view the reports directly on the command line by running:
 - ```k6 run script.js```
 
  <p align="center">
-  <img src="images/." alt="console"/>
+  <img src="images/k6_console.jpg" alt="console"/>
   </p>
 
 
