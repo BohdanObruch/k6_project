@@ -1,0 +1,13 @@
+# User-specific stuff
+# ...
+
+# JetBrains
+.idea/
+*.iml
+
+# Idea
+.idea
+*.im;
+
+# MacOS
+.DS_Store
