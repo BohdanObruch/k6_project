@@ -3,8 +3,8 @@ import { check, group, sleep } from "k6";
 
 const data = JSON.parse(open("./data.json"));
 
-const username_admin = data.admin[0].username;
-const password_admin = data.admin[0].password;
+const username_admin = `${__ENV.username_admin}`;
+const password_admin = `${__ENV.password_admin}`;
 
 const baseUrl = 'http://begemotik.top'
 
@@ -53,6 +53,7 @@ group("Created Users", function() {
           );
         let regex = /;_wpnonce=(.+?)'>Log Out</;
         let logout_nonce = res.body.match(regex);
+
         global.LogoutNonce = logout_nonce[1];
 
         let regex_2 = /Howdy, <span class="display-name">(.+?)<\/span>/;
